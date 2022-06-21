@@ -9,15 +9,32 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+nav{
+  font-family: 'Bungee', cursive;
+}
 
 /*
  * Global layout stuff
  */
 
+.container{
+  display: flex;
+  justify-content:flex-start;
+  background-color: f4f1ec;
+  width: 90vw;
+  margin-left:40px ;
+  margin-right: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*

@@ -1,0 +1,29 @@
+
+
+/* text-decoration: underline; */
+
+.new-tweet{
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+  margin: auto;
+}
+
+.text-box{  
+  width: 100%;
+  background-color:#f4f1ec;
+  border:none;
+  border-bottom: 5px solid black;
+}
+
+#after-border {
+  display:flex;
+  justify-content: space-between;
+
+}
+
+#button {
+  font-family: 'Bungee', cursive;  
+  background-color: #4159b0;
+  color: #FFFFFF;
+}

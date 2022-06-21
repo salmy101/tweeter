@@ -1,0 +1,35 @@
+nav{
+  display: flex;
+  height: 120px;
+  background-color: #4159b0;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  width: 100vw;
+  font-family: 'Bungee', cursive;
+  justify-content: space-between;
+  position: fixed, 
+}
+
+
+#title{
+  display: flex;
+
+}
+
+#subtitle{
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: flex-end;
+  font-size: medium;
+
+}
+
+.arrow-container{
+  display:flex;
+  flex-direction:column;
+  color: red;
+  
+}
