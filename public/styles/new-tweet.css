@@ -19,11 +19,12 @@
 #after-border {
   display:flex;
   justify-content: space-between;
+  font-family: 'Bungee', cursive;  
+
 
 }
 
 #button {
-  font-family: 'Bungee', cursive;  
   background-color: #4159b0;
   color: #FFFFFF;
 }
