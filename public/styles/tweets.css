@@ -1,50 +1,30 @@
-/* .article-tweet {
-  display: flex;
-  border: black;
-  border: solid;
-  height: 30vh;
-  padding: 1.5em;
-  flex-direction: column;
-  justify-content: space-between;
 
-
-}
-
-.at-header {
-  display: flex;
-  width: 100%;
-  border-bottom:black 5px solid;
-  height: 10vh;
-
-}
-
-.at-footer {
-  display: flex;
-  width: 100%;
-  border:none;
-  border-bottom: 5px solid black;
-} */
-
-article.tweet div{
+article.tweet header{
   display: flex;
   background-color: none;
+  flex-direction: row;
   justify-content: space-between;
   padding: 0.3em;
-
-
- 
-
+  background-color: #f4f1ec;
+  border: black solid;
+  align-items: flex-start;
+  height: 30vh;
+  width: auto;
+  
 }
 .profile-icon{
-  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+}
+.users-tweet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-#outer-edge{ 
-  height: 25vh;
-  border: rgb(66, 64, 64) solid;
-}
-
-.user-tweet{
-  /* display: flex; */
-  border:black sold;
+.border{
+  width: 100%;
+  background-color:#f4f1ec;
+  border:none;
+  border-bottom: 5px solid black;
 }
