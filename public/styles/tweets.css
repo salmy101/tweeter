@@ -1,0 +1,15 @@
+.feed {
+  display: flex;
+  border: black;
+  border: solid;
+
+
+}
+
+.article-feed {
+  display: flex;
+  width: 100%;
+  background-color: black;
+
+
+}

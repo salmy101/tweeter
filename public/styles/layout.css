@@ -25,8 +25,7 @@ nav{
   margin-left:40px ;
   margin-right: 40px;
   font-family: 'Source Sans Pro', sans-serif;
-
-
+  flex-direction: column;
 }
 
 
