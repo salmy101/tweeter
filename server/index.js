@@ -2,7 +2,7 @@
 //express uses the index file to start up a server!!
 // Basic express setup:
 
-const PORT          = 8080;
+const PORT          = 3000;
 const express       = require("express");
 const bodyParser    = require("body-parser"); //Parse+format input available under the req.body property.
 const app           = express(); //starts the server, aka the app

@@ -1,15 +1,50 @@
-.feed {
+/* .article-tweet {
   display: flex;
   border: black;
   border: solid;
+  height: 30vh;
+  padding: 1.5em;
+  flex-direction: column;
+  justify-content: space-between;
 
 
 }
 
-.article-feed {
+.at-header {
   display: flex;
   width: 100%;
-  background-color: black;
+  border-bottom:black 5px solid;
+  height: 10vh;
+
+}
+
+.at-footer {
+  display: flex;
+  width: 100%;
+  border:none;
+  border-bottom: 5px solid black;
+} */
+
+article.tweet div{
+  display: flex;
+  background-color: none;
+  justify-content: space-between;
+  padding: 0.3em;
 
 
+ 
+
+}
+.profile-icon{
+  flex-direction: row;
+}
+
+#outer-edge{ 
+  height: 25vh;
+  border: rgb(66, 64, 64) solid;
+}
+
+.user-tweet{
+  /* display: flex; */
+  border:black sold;
 }
