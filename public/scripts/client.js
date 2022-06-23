@@ -88,10 +88,14 @@ return $tweet
 }
 
 $(document).ready(function() {
-  // renderTweets(data);
-  $('form').submit(async( event ) => {
-    console.log(event.target.text.value);
-    event.preventDefault();
+$('form').submit(async( event ) => {
+  event.preventDefault();
+  const tweetLength = $("#tweet-text").val().length;
+    if (tweetLength > 140) {
+      return alert("You have exceeded the maximum number of characters.")
+    } else if( tweetLength === 0) {
+      return alert("Please enter your tweet in the textbox.");
+    }
     await $.ajax("/tweets",{ 
       method:"POST", 
       data: $("#tweet-text").serialize()
