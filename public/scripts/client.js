@@ -57,22 +57,22 @@ const createTweetElement = function(tweet) {
   <header>
     <div class="top-half">
     <div class="user">
-      <span class="avatar">${tweet.user.avatars}</span>
-      <div class="name">${tweet.user.name}</div>
+      <span class="avatar">${escape(tweet.user.avatars)}</span>
+      <div class="name">${escape(tweet.user.name)}</div>
     </div>
 
-    <div class="handle">${tweet.user.handle}</div>
+    <div class="handle">${escape(tweet.user.handle)}</div>
    </div>
 
     <div class="bottom-half">
 
       <div class="content">
-       <div class="text">${tweet.content.text}</div>
+       <div class="text">${escape(tweet.content.text)}</div>
        <div class="border"></div>
      </div>
 
      <div class="date-icons">
-       <div class ="date">${tweet.created_at}</div>
+       <div class ="date">${escape(tweet.created_at)}</div>
        <div class="icons">
          <i class="fa-solid fa-arrows-retweet"></i>
          <i class="fa-solid fa-flag"></i>
@@ -85,11 +85,19 @@ const createTweetElement = function(tweet) {
   
 </article>`);
 return $tweet
-}
+} 
+
+
 
 $(document).ready(function() {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   loadTweets(); 
-$('form').submit(async( event ) => {
+  $('form').submit(async( event ) => {
   event.preventDefault();
   const tweetLength = $("#tweet-text").val().length;
     if (tweetLength > 140) {

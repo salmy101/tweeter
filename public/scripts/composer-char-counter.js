@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 });
 
-//diff methods to access DOM elements (find,select...)
+//CHNAGE line 9 to use different methods to access DOM elements like (find,select...)!!
 
 
 
