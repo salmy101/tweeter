@@ -10,6 +10,8 @@ $(document).ready(function() {
     $counter.text(charactersLeft) //The result of the .text() method is a string containing the combined text of all matched elements
     if (charactersLeft < 0) {
         $counter.css("color", "red")
+    } else {
+      $counter.css("color", "black")
     }
 
   });

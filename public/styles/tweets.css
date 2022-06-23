@@ -46,13 +46,19 @@ article.tweet header{
   width: auto;
   background-color:#f4f1ec;
   border:none;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid rgb(58, 55, 55);
 }
 
 .date-icons{
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 } 
+
+.icons{
+  color: gray;
+}
+
 .date{
   font-family: 'Source Sans Pro', sans-serif;
 } 

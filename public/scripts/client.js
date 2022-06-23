@@ -50,8 +50,8 @@ const createTweetElement = function(tweet) {
      <div class="date-icons">
        <div class ="date">${timeago.format(tweet.created_at)}</div>
        <div class="icons">
-         <i class="fa-solid fa-arrows-retweet"></i>
-         <i class="fa-solid fa-flag"></i>
+         <i class="fa-solid fa-flag" i></i>
+         <i class="fa-solid fa-retweet"></i>
          <i class="fa-solid fa-heart"></i>
        </div>
      </div>
@@ -71,15 +71,18 @@ $(document).ready(function() {
   event.preventDefault();
   const tweetLength = $("#tweet-text").val().length;
     if (tweetLength > 140) {
-      return alert("You have exceeded the maximum number of characters.")
+      $("#error-message").text("Woah! You have exceeded the max number of characters").slideDown();
     } else if( tweetLength === 0) {
-      return alert("Please enter your tweet in the textbox.");
-    }
-    console.log(event.target.text.value);
-    await $.ajax("/tweets",{ 
+        $("#error-message").text("Please enter a tweet").slideDown();
+    } else if (tweetLength <=140) {
+      $("#error-message").slideUp();
+      console.log(event.target.text.value);
+       await $.ajax("/tweets",{ 
       method:"POST", 
       data: $("#tweet-text").serialize()
     })
+    }
+    
     await loadTweets()
   }); 
 }) 
