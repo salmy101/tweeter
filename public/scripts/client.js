@@ -82,9 +82,14 @@ return $tweet
 
 $(document).ready(function() {
   renderTweets(data);
-  $('form').submit(function( event ) {
+  $('form').submit(async( event ) => {
     console.log(event.target.text.value);
     event.preventDefault();
+    await $.ajax("/tweets",{ 
+      method:"POST", 
+      data: $("#tweet-text").serialize()
+    })
   });
 }) 
+
 
