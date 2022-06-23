@@ -53,6 +53,9 @@ article.tweet header{
   display: flex;
   justify-content: space-between;
 } 
+.date{
+  font-family: 'Source Sans Pro', sans-serif;
+} 
 
 /* .icons{
   hover

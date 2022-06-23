@@ -5,40 +5,18 @@
  */
 // Test / driver code (temporary). Eventually will get this from the server.
 
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ] 
-
- //call
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
  const loadTweets = function() { 
   $.get("/tweets").then(data => { 
+    console.log(data);
     renderTweets(data) 
   }) 
 } ; 
-
 
 const renderTweets = function(arr) {    // loops through tweets
   arr.forEach(tweet => { // calls createTweetElement for each tweet
@@ -49,19 +27,17 @@ const renderTweets = function(arr) {    // loops through tweets
 
 }    
 
-
-
 const createTweetElement = function(tweet) {
   const $tweet = $(`<article class="tweet">
   <br>
   <header>
     <div class="top-half">
     <div class="user">
-      <span class="avatar">${escape(tweet.user.avatars)}</span>
-      <div class="name">${escape(tweet.user.name)}</div>
+      <img src="${(tweet.user.avatars)}" width="80" height="80">
+      <div class="name">${tweet.user.name}</div>
     </div>
 
-    <div class="handle">${escape(tweet.user.handle)}</div>
+    <div class="handle">${tweet.user.handle}</div>
    </div>
 
     <div class="bottom-half">
@@ -72,7 +48,7 @@ const createTweetElement = function(tweet) {
      </div>
 
      <div class="date-icons">
-       <div class ="date">${escape(tweet.created_at)}</div>
+       <div class ="date">${tweet.created_at}</div>
        <div class="icons">
          <i class="fa-solid fa-arrows-retweet"></i>
          <i class="fa-solid fa-flag"></i>
@@ -90,12 +66,6 @@ return $tweet
 
 
 $(document).ready(function() {
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
   loadTweets(); 
   $('form').submit(async( event ) => {
   event.preventDefault();

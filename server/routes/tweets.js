@@ -18,11 +18,11 @@ module.exports = function(DataHelpers) {
   });
 
   tweetsRoutes.post("/", function(req, res) {
-    // console.log("Posted," , req.body.text)
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
+    // console.log("Posted," , req.body.text)
 
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
