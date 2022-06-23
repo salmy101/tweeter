@@ -31,7 +31,7 @@
 //   }
 // ] 
 
- 
+ //call
 
 const loadTweets = function() { 
   $.get("/tweets").then(data => { 
@@ -44,7 +44,7 @@ const renderTweets = function(arr) {    // loops through tweets
   arr.forEach(tweet => { // calls createTweetElement for each tweet
   //  createTweetElement(tweet)// takes return value and appends it to the tweets container  
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }); 
 
 }    
@@ -88,6 +88,7 @@ return $tweet
 }
 
 $(document).ready(function() {
+  loadTweets(); 
 $('form').submit(async( event ) => {
   event.preventDefault();
   const tweetLength = $("#tweet-text").val().length;
@@ -96,11 +97,13 @@ $('form').submit(async( event ) => {
     } else if( tweetLength === 0) {
       return alert("Please enter your tweet in the textbox.");
     }
+    console.log(event.target.text.value);
     await $.ajax("/tweets",{ 
       method:"POST", 
       data: $("#tweet-text").serialize()
     })
-  }); loadTweets(); 
+    await loadTweets()
+  }); 
 }) 
 
 
