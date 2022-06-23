@@ -33,7 +33,7 @@
 
  //call
 
-const loadTweets = function() { 
+ const loadTweets = function() { 
   $.get("/tweets").then(data => { 
     renderTweets(data) 
   }) 
