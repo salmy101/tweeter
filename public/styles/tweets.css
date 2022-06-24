@@ -10,7 +10,6 @@ article.tweet header{
   align-items: flex-start;
   height: initial;
   min-height: 50px;
-  width: 90vw;
   min-width: 100px;
   margin-bottom: 20px;
   
@@ -61,25 +60,6 @@ article.tweet header{
 .icons{
   color: gray;
 }
-
-/* .date{
-  font-family: 'Source Sans Pro', sans-serif;
-}  */
-
-/* .icons{
-  hover
-} */
-
-@media only screen and (min-width: 1024px) {
-  .main-header{
-    width: 35vw;
-    float: left;
-  }
-  .container{
-    width: 50vw;
-    float: right;
-  }
-
-  article.tweet header{
-  }
+.icon:hover {
+  background-color: blue;
 }

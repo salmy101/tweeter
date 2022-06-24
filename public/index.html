@@ -51,7 +51,7 @@
 
       </div>
     </nav>
-
+  <div class="main-container">
     <header class="main-header">
       <div id="profile-pic">
           <img src="/images/profile-hex.png"> 
@@ -60,13 +60,13 @@
       <div id="profile-name">
           <h2 >Salma Ibrahim</h2>
       </div>
-  </header>
+    </header>
       
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <label id="error-message" style="display: none"></label>
-        <br>
+       <label id="error-message" style="display: none"></label> 
+        <br> 
         <form action="/tweets" method="post">
           <label for="tweet-text">What are you humming about?</label>
           <textarea class="text-box"name="text" id="tweet-text"></textarea>
@@ -78,21 +78,20 @@
         <br>
       </section> 
       <div id="tweets-container">
-        <!-- <article class="tweet">
+        <article class="tweet">
           <header>
             <div class="top-half">
             <div class="user">
               <span class="avatar"></span>
               <div class="name">Salma Ibrahim</div>
             </div>
-  
             <div class="handle">@salmyyy</div>
            </div>
   
             <div class="bottom-half">
   
               <div class="content">
-               <div class="text">What have i gotten myself into..😪</div>
+               <div class="text"></div>
                <div class="border"></div>
              </div>
    
@@ -108,9 +107,10 @@
   
           </header>
           
-        </article> -->
+        </article>
       </div>
       
     </main>
+  </div>
   </body>
 </html>

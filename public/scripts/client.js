@@ -13,7 +13,7 @@ const escape = function (str) {
 
  const loadTweets = function() { 
   $.get("/tweets").then(data => { 
-    // console.log(data);
+    $('#tweets-container').empty(),
     renderTweets(data) 
   }) 
 } ; 
@@ -79,9 +79,10 @@ $(document).ready(function() {
        await $.ajax("/tweets",{ 
       method:"POST", 
       data: $("#tweet-text").serialize()
-    })
+      
+    }).then( ()=> $("#tweet-text").val(""),
+     $('.counter').text("140"))
     }
-    
     await loadTweets()
   }); 
 }) 

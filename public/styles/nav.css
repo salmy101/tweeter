@@ -38,3 +38,7 @@ nav{
   color: red;
   animation: bounce2 1.5s ease infinite forwards;
 }
+
+#arrow:hover {
+  transform: scale(1.5);
+}

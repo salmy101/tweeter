@@ -45,4 +45,20 @@ body {
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+ */ 
+
+ @media only screen and (max-width: 1023) {
+  .new-tweet{
+    padding-top:20px;
+  }
+ }
+
+ @media only screen and (min-width: 1024px) {
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    justify-content: space-between;
+  }
+
+ }  

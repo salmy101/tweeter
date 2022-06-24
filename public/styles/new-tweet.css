@@ -10,14 +10,11 @@
 
 }
 
-
-
 .new-tweet{
   display:flex;
   flex-direction: column;
   align-self: center;
   margin: auto;
-  padding-top: 20px;
   width: 99%
 }
 
