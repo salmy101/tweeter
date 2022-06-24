@@ -36,4 +36,5 @@ nav{
 
 #arrow{
   color: red;
+  animation: bounce2 1.5s ease infinite forwards;
 }

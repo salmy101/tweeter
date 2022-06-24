@@ -13,7 +13,7 @@ const escape = function (str) {
 
  const loadTweets = function() { 
   $.get("/tweets").then(data => { 
-    console.log(data);
+    // console.log(data);
     renderTweets(data) 
   }) 
 } ; 
@@ -29,7 +29,6 @@ const renderTweets = function(arr) {    // loops through tweets
 
 const createTweetElement = function(tweet) {
   const $tweet = $(`<article class="tweet">
-  <br>
   <header>
     <div class="top-half">
     <div class="user">
@@ -76,7 +75,7 @@ $(document).ready(function() {
         $("#error-message").text("Please enter a tweet").slideDown();
     } else if (tweetLength <=140) {
       $("#error-message").slideUp();
-      console.log(event.target.text.value);
+      // console.log(event.target.text.value);
        await $.ajax("/tweets",{ 
       method:"POST", 
       data: $("#tweet-text").serialize()

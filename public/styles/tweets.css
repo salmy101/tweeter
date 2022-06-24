@@ -8,8 +8,11 @@ article.tweet header{
   background-color: #f4f1ec;
   border: black solid;
   align-items: flex-start;
-  height: 40vh;
-  width: auto;
+  height: initial;
+  min-height: 50px;
+  width: 90vw;
+  min-width: 100px;
+  margin-bottom: 20px;
   
 }
 .top-half{
@@ -59,10 +62,24 @@ article.tweet header{
   color: gray;
 }
 
-.date{
+/* .date{
   font-family: 'Source Sans Pro', sans-serif;
-} 
+}  */
 
 /* .icons{
   hover
 } */
+
+@media only screen and (min-width: 1024px) {
+  .main-header{
+    width: 35vw;
+    float: left;
+  }
+  .container{
+    width: 50vw;
+    float: right;
+  }
+
+  article.tweet header{
+  }
+}
