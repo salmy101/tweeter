@@ -16,3 +16,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Picture of Tweeter
+![Screenshot of Desktop Size](https://github.com/salmy101/tweeter/blob/master/docs/desktop-size.png?raw=true)
+### Screenshot of Desktop Size^^
+
+
+![Screenshot of Navigation Bar and Header](https://github.com/salmy101/tweeter/blob/master/docs/nax-header.png?raw=true)
+### Screenshot of Navigation Bar and Header^^^
+
+
+
+![Screenshot of the Tweeter Feed](https://github.com/salmy101/tweeter/blob/master/docs/tweeter-feed.png?raw=true)
+### Screenshot of the Tweeter Feed^^^
