@@ -60,6 +60,16 @@ article.tweet header{
 .icons{
   color: gray;
 }
-.icon:hover {
+/* .icon:hover {
   background-color: blue;
+} */
+
+.fa-solid:hover {
+  color: navy;
+}
+.fa-heart:hover {
+  color: pink;
+}
+.fa-comment:hover {
+  color: burlywood;
 }

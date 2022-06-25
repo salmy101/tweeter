@@ -49,7 +49,7 @@ const createTweetElement = function(tweet) {
      <div class="date-icons">
        <div class ="date">${timeago.format(tweet.created_at)}</div>
        <div class="icons">
-         <i class="fa-solid fa-flag" i></i>
+        <i class="fa-solid fa-comment"></i>
          <i class="fa-solid fa-retweet"></i>
          <i class="fa-solid fa-heart"></i>
        </div>
