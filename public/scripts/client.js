@@ -11,28 +11,28 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
- const loadTweets = function() { 
-  $.get("/tweets").then(data => { 
-    $('#tweets-container').empty(),
-    renderTweets(data) 
-  }) 
-} ; 
+const loadTweets = function () {
+  $.get("/tweets").then((data) => {
+    $("#tweets-container").empty(), renderTweets(data);
+  });
+};
 
-const renderTweets = function(arr) {    // loops through tweets
-  arr.forEach(tweet => { // calls createTweetElement for each tweet
-  //  createTweetElement(tweet)// takes return value and appends it to the tweets container  
+const renderTweets = function (arr) {
+  // loops through tweets
+  arr.forEach((tweet) => {
+    // calls createTweetElement for each tweet
+    //  createTweetElement(tweet)// takes return value and appends it to the tweets container
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweet);
-  }); 
+    $("#tweets-container").prepend($tweet);
+  });
+};
 
-}    
-
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   const $tweet = $(`<article class="tweet">
   <header>
     <div class="top-half">
     <div class="user">
-      <img src="${(tweet.user.avatars)}" width="80" height="80">
+      <img src="${tweet.user.avatars}" width="80" height="80">
       <div class="name">${tweet.user.name}</div>
     </div>
 
@@ -59,32 +59,28 @@ const createTweetElement = function(tweet) {
   </header>
   
 </article>`);
-return $tweet
-} 
+  return $tweet;
+};
 
-
-
-$(document).ready(function() {
-  loadTweets(); 
-  $('form').submit(async( event ) => {
-  event.preventDefault();
-  const tweetLength = $("#tweet-text").val().length;
+$(document).ready(function () {
+  loadTweets();
+  $("form").submit(async (event) => {
+    event.preventDefault();
+    const tweetLength = $("#tweet-text").val().length;
     if (tweetLength > 140) {
-      $("#error-message").text("Woah! You have exceeded the max number of characters").slideDown();
-    } else if( tweetLength === 0) {
-        $("#error-message").text("Please enter a tweet").slideDown();
-    } else if (tweetLength <=140) {
+      $("#error-message")
+        .text("Woah! You have exceeded the max number of characters")
+        .slideDown();
+    } else if (tweetLength === 0) {
+      $("#error-message").text("Please enter a tweet").slideDown();
+    } else if (tweetLength <= 140) {
       $("#error-message").slideUp();
       // console.log(event.target.text.value);
-       await $.ajax("/tweets",{ 
-      method:"POST", 
-      data: $("#tweet-text").serialize()
-      
-    }).then( ()=> $("#tweet-text").val(""),
-     $('.counter').text("140"))
+      await $.ajax("/tweets", {
+        method: "POST",
+        data: $("#tweet-text").serialize(),
+      }).then(() => $("#tweet-text").val(""), $(".counter").text("140"));
     }
-    await loadTweets()
-  }); 
-}) 
-
-
+    await loadTweets();
+  });
+});

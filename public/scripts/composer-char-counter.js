@@ -17,5 +17,3 @@ $(document).ready(function () {
     $counter.css("color", "black");
   });
 });
-
-//CHNAGE line 9 to use different methods to access DOM elements like (find,select...)!!

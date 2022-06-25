@@ -6,59 +6,54 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-nav{
-  font-family: 'Bungee', cursive;
+nav {
+  font-family: "Bungee", cursive;
 }
 
 /*
  * Global layout stuff
  */
 
- /* *{
-   box-sizing: border-box;
- } */
 
-.container{
+.container {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   background-color: f4f1ec;
   width: 90vw;
-  margin-left:40px ;
+  margin-left: 40px;
   margin-right: 40px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   flex-direction: column;
-
 }
-
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  padding-top: 120px; 
-
+  font-family: "Source Sans Pro", sans-serif;
+  padding-top: 120px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
- */ 
+ */
 
- @media only screen and (max-width: 1023) {
-  .new-tweet{
-    padding-top:20px;
+@media only screen and (max-width: 1023) {
+  .new-tweet {
+    padding-top: 20px;
   }
- }
+}
 
- @media only screen and (min-width: 1024px) {
-  .main-container{
+@media only screen and (min-width: 1024px) {
+  .main-container {
     display: flex;
     flex-direction: row;
     padding-top: 100px;
     justify-content: space-between;
   }
-
- }  
+}
